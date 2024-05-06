@@ -1,4 +1,4 @@
-# sd (shutdown)
+# sd (shutdown) [![Go](https://github.com/f01c33/sd/actions/workflows/go.yml/badge.svg)](https://github.com/f01c33/sd/actions/workflows/go.yml)
 
 Schedule a shutdown of your pc using natural language!
 
