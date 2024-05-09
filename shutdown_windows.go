@@ -1,7 +1,11 @@
 package main
 
-import sh "github.com/bitfield/script"
+import (
+	"fmt"
 
-func Shutdown() {
-	sh.Exec("shutdown /s /p now").Stdout()
+	sh "github.com/bitfield/script"
+)
+
+func Shutdown(t int64) {
+	sh.Exec(fmt.Sprintf("shutdown /s /p %d", t)).Stdout()
 }
