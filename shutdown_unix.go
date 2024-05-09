@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	sh "github.com/bitfield/script"
 )
 
-func Shutdown(t int64) {
-	sh.Exec(fmt.Sprintf("shutdown -P %d", t)).Stdout()
+func Shutdown(t time.Time) {
+	sh.Exec(fmt.Sprintf("shutdown +%d", int64(time.Until(t).Abs().Minutes()))).Stdout()
 }

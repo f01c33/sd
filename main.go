@@ -14,5 +14,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	Shutdown(int64(time.Until(t).Seconds()))
+	Shutdown(t)
 }
