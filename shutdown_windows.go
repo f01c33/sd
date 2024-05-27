@@ -8,5 +8,8 @@ import (
 )
 
 func Shutdown(t time.Time) {
-	sh.Exec(fmt.Sprintf("shutdown /s /f %d", int64(time.Until(t).Abs().Minutes()))).Stdout()
+	_, err := sh.Exec(fmt.Sprintf("shutdown /s /f %d", int64(time.Until(t).Abs().Minutes()))).Stdout()
+	if err != nil {
+		panic(err)
+	}
 }
