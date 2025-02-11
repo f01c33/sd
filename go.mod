@@ -3,7 +3,7 @@ module github.com/f01c33/sd
 go 1.22.2
 
 require (
-	github.com/bitfield/script v0.22.1
+	github.com/bitfield/script v0.24.0
 	github.com/tj/go-naturaldate v1.3.0
 )
 
